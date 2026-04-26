@@ -10,6 +10,7 @@ buildscript {
     }
 }
 
+// Esta forma es la que no falla nunca en GitHub Actions
 tasks.register('clean', Delete) {
-    delete rootProject.layout.buildDirectory
+    delete rootProject.buildDir
 }
