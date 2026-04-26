@@ -1,0 +1,2 @@
+-keep class com.pricescan.app.** { *; }
+-keep class com.journeyapps.** { *; }

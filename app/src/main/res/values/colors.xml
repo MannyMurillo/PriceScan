@@ -1,0 +1,12 @@
+<resources>
+    <color name="bg">#0A0A0F</color>
+    <color name="surface">#13131A</color>
+    <color name="card">#1C1C28</color>
+    <color name="accent">#00E5A0</color>
+    <color name="accent2">#FF6B35</color>
+    <color name="accent3">#7C5CFC</color>
+    <color name="text">#F0F0F5</color>
+    <color name="muted">#6B6B80</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
