@@ -9,8 +9,6 @@ buildscript {
     }
 }
 
-// AQUÍ NO DEBE HABER NADA DE "allprojects" NI "repositories"
-
 tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
