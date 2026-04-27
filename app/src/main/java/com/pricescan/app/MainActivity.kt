@@ -169,14 +169,17 @@ class MainActivity : AppCompatActivity() {
     private fun fetchPricesWithAI(barcode: String, productName: String, brand: String, imgUrl: String) {
         runOnUiThread { setLoadingStep("Consultando precios en tiendas USA...") }
 
-        val prompt = """You are a price comparison assistant for US stores.
-Product: "$productName" by "${brand.ifEmpty { "Unknown" }}"
+       val prompt = """Search the web right now for the current retail price of this exact product in the United States:
+Product: "$productName"
+Brand: "$brand"
 Barcode: $barcode
 
-Search for current approximate retail prices at major US retailers.
-Return ONLY a JSON array (no markdown, no preamble) like this:
-[{"store":"Walmart","price":3.47,"unit":"each","emoji":"🛒","note":"In store & online"},{"store":"Amazon","price":3.99,"unit":"each","emoji":"📦","note":"Prime eligible"},{"store":"Target","price":4.19,"unit":"each","emoji":"🎯","note":"Circle offer"},{"store":"Kroger","price":3.79,"unit":"each","emoji":"🏪","note":"Loyalty price"},{"store":"Costco","price":12.99,"unit":"bulk pack","emoji":"🏢","note":"Members only"}]
-Include 4-6 stores. Use realistic current US prices. Sort by price ascending."""
+Search each of these stores and find the real current price:
+Walmart, Amazon, Target, Kroger, Aldi, Dillons, Walgreens, CVS
+
+Return ONLY a JSON array, no markdown, no explanation:
+[{"store":"Walmart","price":3.47,"unit":"each","emoji":"🛒","note":"walmart.com"},{"store":"Aldi","price":2.99,"unit":"each","emoji":"🏬","note":"aldi.us"},{"store":"Dillons","price":3.29,"unit":"each","emoji":"🏪","note":"dillons.com"}]
+Use REAL current prices from web search. Sort by price ascending."""
 
         val bodyJson = JSONObject().apply {
             put("model", "claude-sonnet-4-20250514")
