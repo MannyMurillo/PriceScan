@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/priceRowCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/price_item_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="14dp">
+
+    <!-- Store Emoji -->
+    <TextView
+        android:id="@+id/tvStoreEmoji"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/store_icon_bg"
+        android:gravity="center"
+        android:textSize="22sp"
+        tools:text="🛒" />
+
+    <!-- Store Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Walmart" />
+
+            <TextView
+                android:id="@+id/tvAiBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/badge_bg"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="🤖 IA"
+                android:textColor="@color/accent"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStoreNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/muted"
+            android:textSize="12sp"
+            tools:text="Precio bajo todos los días" />
+    </LinearLayout>
+
+    <!-- Price Info -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPriceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="$3.48" />
+
+        <TextView
+            android:id="@+id/tvPriceUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/muted"
+            android:textSize="11sp"
+            tools:text="cada uno" />
+    </LinearLayout>
+
+</LinearLayout>

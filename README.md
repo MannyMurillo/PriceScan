@@ -1,27 +1,38 @@
 # PriceScan USA 🔍
 
-App Android para escanear productos y comparar precios en tiendas de EE.UU.
+Aplicación Android moderna para escanear productos (o buscar por nombre) y comparar precios en las principales tiendas de Estados Unidos (Walmart, Target, Aldi, Kroger, Amazon, Costco).
 
-## Cómo obtener el APK gratis (sin instalar nada)
+## ✨ Características Principales
 
-### Opción 1: GitHub Actions (Recomendada)
-1. Crea una cuenta en [github.com](https://github.com)
-2. Crea un nuevo repositorio llamado `PriceScanApp`
-3. Sube todos estos archivos al repositorio
-4. Ve a la pestaña **Actions** en GitHub
-5. Haz clic en **Build APK** → **Run workflow**
-6. Espera ~5 minutos y descarga el APK desde **Artifacts**
+- 📷 **Escáner de código de barras**: Escaneo con cámara rápido mediante ZXing.
+- 🔍 **Búsqueda Flexible**: Busca por código de barras numérico o directamente por nombre del producto (ej: *"Milk"*, *"Doritos"*).
+- 🖼️ **Carga de Imágenes Reales**: Descarga y muestra la foto real del producto usando Glide.
+- 🤖 **Comparación Inteligente con IA (Gemini API)**: Cuando los datos reales de la comunidad no estén disponibles, un motor de Inteligencia Artificial (Gemini) estima los precios actuales en las tiendas de EE.UU.
+- 🟢 **Distinción Transparente de Datos**: Muestra distintivos claros cuando la información es *🟢 Datos Reales Verificados* o *🤖 Estimado de IA de Mercado*.
+- ⚡ **Rendimiento Optimizado**: Interfaz construida con `RecyclerView`, `ViewBinding` y arquitectura limpia.
+- 📤 **Compartir y Copiar**: Exporta las comparativas fácilmente a WhatsApp, notas o correo.
 
-### Opción 2: CodeMagic
-1. Ve a [codemagic.io](https://codemagic.io) y regístrate con GitHub
-2. Conecta tu repositorio PriceScanApp
-3. Selecciona **Android** → **Debug build**
-4. Haz clic en **Start build**
-5. Recibirás el APK por correo en ~10 minutos
+## 🛠️ Compilando el proyecto
 
-## Características
-- 📷 Escáner de códigos de barras con cámara
-- 🔍 Búsqueda en Open Food Facts + UPC Item DB
-- 💰 Comparación de precios con IA (Claude)
-- 🏪 Walmart, Amazon, Target, Kroger, Costco
-- 📤 Compartir y copiar resultados
+### Requisitos
+- Android Studio Hedgehog (2023.1.1) o superior.
+- JDK 17.
+- Android SDK 34.
+
+### Compilar localmente
+```bash
+# En Windows:
+gradlew.bat assembleDebug
+
+# En Linux/macOS:
+./gradlew assembleDebug
+```
+
+## 🚀 Generar APK gratis en la nube (GitHub Actions)
+1. Sube este código a tu repositorio en GitHub.
+2. Ve a la pestaña **Actions**.
+3. Selecciona el workflow **Build APK** y presiona **Run workflow**.
+4. Descarga el APK generado directamente desde la sección **Artifacts**.
+
+---
+Desarrollado con Kotlin, OkHttp, Glide y Gemini AI 🇺🇸
